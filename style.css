@@ -162,7 +162,11 @@ ________________________
 
 .item1{
     background-color: rgb(255, 190, 225);
+    position: sticky;
+    top: 50px;
+    left: 50px;
 }
+
 
 .item2{
     background-color: rgb(131, 204, 233)
@@ -173,6 +177,9 @@ ________________________
 Units
 ________________________
 */
+.box__percent {
+    width: 50%;
+}
 .box__container {
     height: auto;
     margin: 10px;
@@ -185,18 +192,30 @@ ________________________
     background-color: var(--primary-300);
 }
 
+
 .font__container {
     height: auto;
     margin: 10px;
     font-size: 25px;
 }
-
+.font__1em {
+    font-size: 2em;
+}
+.font__1rem {
+    font-size: 1rem;
+}
+.font__100percent {
+    font-size: 100%;}
 
 /*
 ________________________
 Flex
 ________________________
+flex-flow:column-reverse wrap-reverse;
+align-content:space-between;
+justify-content:center;
 */
+
 .flex__container {
     display: flex;
     justify-content: center;
@@ -212,22 +231,48 @@ ________________________
     height: 20vh;
     width: 90vw;
     margin-bottom: 50px;
-    background-color: var(--primary-100);
+    background-color: var(--primary-400);
 }
 /* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px){
+    .media__container{
 
+        background-color: var(--primary-900);
+    }
+}
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
+@media screen and (min-width: 600px  ) and (max-width: 800px){
+    .media__container{
 
+        background-color: var(--primary-500);
+    }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px  ){
+    .media__container{
 
+        background-color: var(--primary-800);
+    }
+}
 
 
 /* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px  ) {
+    .media__container{
 
+        background-color: var(--primary-200);
+    }
+}
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px  ) {
+    .media__container{
+
+        background-color: var(--primary-400);
+    }
+}
